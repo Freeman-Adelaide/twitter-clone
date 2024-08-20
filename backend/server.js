@@ -6,6 +6,7 @@ import { v2 as cloudinary } from 'cloudinary';
 
 import authRouter from './routes/authRoutes.js';
 import userRouter from './routes/userRoutes.js';
+import postRouter from './routes/postRoutes.js';
 
 import { connectMongoDB } from './db/connectMongoDB.js';
 
@@ -28,7 +29,8 @@ app.use(cookieParser());
 
 //api endpoints
 app.use("/api/auth", authRouter);
-app.use("/api/users", userRouter)
+app.use("/api/users", userRouter);
+app.use("/api/posts", postRouter)
 
 app.get("/", (req, res) => {
     res.send("Server is ready")
