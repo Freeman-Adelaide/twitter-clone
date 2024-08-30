@@ -21,9 +21,9 @@ const createPost = async (req, res) => {
         }
 
         const newPost = new Post({
+            text: text,
             user: userId,
-            text,
-            img
+            img: img,
         })
 
         await newPost.save();
