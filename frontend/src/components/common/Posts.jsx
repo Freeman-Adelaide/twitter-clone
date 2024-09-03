@@ -34,7 +34,7 @@ const Posts = ({ feedType, username, userId }) => {
 				return data;
 
 			} catch (error) {
-				
+				throw new Error(error);
 			}
 		}
 	})
