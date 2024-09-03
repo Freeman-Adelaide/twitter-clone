@@ -117,7 +117,7 @@ const updateUser = async (req, res) => {
 
         if(profileImg){
             if(user.profileImg){
-                await cloudinary.upload.destroy(user.profileImg.split('/').pop().split('.')[0]);
+                await cloudinary.uploader.destroy(user.profileImg.split('/').pop().split('.')[0]);
             }
             const uploadedResponse = await cloudinary.uploader.upload(profileImg)
             profileImg = uploadedResponse.secure_url;
@@ -125,7 +125,7 @@ const updateUser = async (req, res) => {
 
         if(coverImg){
             if(user.coverImg){
-                await cloudinary.upload.destroy(user.coverimg.split('/').pop().split('.')[0]);
+                await cloudinary.uploader.destroy(user.coverimg.split('/').pop().split('.')[0]);
             }
             const uploadedResponse = await cloudinary.uploader.upload(coverImg);
             coverImg = uploadedResponse.secure_url;
