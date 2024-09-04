@@ -12,7 +12,8 @@
   "dependencies": {
     "@tanstack/react-query": "^5.52.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "twitter-clone": "file:.."
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
